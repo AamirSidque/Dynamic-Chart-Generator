@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Chart Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Chart Generator</h1>
+
+        <!-- Initial Input Section -->
+        <div class="initial-input">
+            <label for="numDatasets">Number of Data Sets:</label>
+            <input type="number" id="numDatasets" min="1" max="10">
+            <button onclick="generateDatasetInputs()">Submit</button>
+        </div>
+
+        <!-- Dynamic Dataset Input Fields -->
+        <div id="datasetInputs" class="scrollable"></div>
+
+        <!-- Generate Chart Button -->
+        <div id="generateChartButton" style="display: none;">
+            <button onclick="generateCharts()">Generate Chart</button>
+        </div>
+
+        <!-- Download Button -->
+        <div id="downloadButtons" style="display: none;">
+            <button onclick="downloadChart('lineChart', 'line-chart.png')">Download Line Chart</button>
+            <button onclick="downloadChart('barChart', 'bar-chart.png')">Download Bar Chart</button>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+            <canvas id="barChart"></canvas>
+        </div>
+
+
+    </div>
+
+     <footer>
+            <p>Created by <a href="https://github.com/aamirsidque">Aamir Sidque</a></p>
+        </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
