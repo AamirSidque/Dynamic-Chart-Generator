@@ -1,4 +1,3 @@
-Here’s a sample `README.md` for your **Dynamic-Chart-Generator** project:
 
 ```markdown
 # Dynamic-Chart-Generator
